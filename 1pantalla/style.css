@@ -6,7 +6,7 @@
   }
   
   body {
-    background-image: url("fondo1si.png");
+    background-image: url("../imgs/fondoimg.png");
     background-size: cover;
     overflow: hidden;
     /* padding-top: 60px; */
@@ -18,8 +18,8 @@
     display: flex;
     justify-content: space-between;
     /* padding: -10px 10px; */
-    position: absolute;
-    z-index: 10;
+    /* position: absolute;
+    z-index: 10; */
     /* margin-top: -60px; */
   }
   
@@ -49,7 +49,7 @@
   main {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 60px);
   }
   
   .main_izq {
@@ -60,6 +60,7 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+    margin-top: 50px;
   }
   
   .main_izq img {
@@ -82,7 +83,7 @@
     height: 100%;
     display: flex;
     margin-right: 150px;
-    margin-bottom: 120px;
+    margin-bottom: 0px;
     position: relative;
     z-index: -20;
   }
