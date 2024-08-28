@@ -13,7 +13,7 @@ function header() {
         <div id="dropdown">
             <ul class="ul1">
                 Traductor
-                <a href="../4pantalla-trns/index.html" class="tr">
+                <a href="../4pantalla/index.html" class="tr">
                     New Traduction
                 </a>
             </ul>
