@@ -5,15 +5,9 @@
     font-family: "Montserrat", sans-serif;
 }
 body{
-    width: 100vw;
-    height: 100vh;
-
-    background-color: #FFC289;
-
-    /*background-image: url("fondo.png");
+    background-image: url("../imgs/fondo.png");
     background-size: cover;
     overflow: hidden;
-    z-index: -100;*/
 }
 header {
     width: 100%;
@@ -48,23 +42,21 @@ header {
 }
 main{
     display: flex;
-    width: 100vw;
-    height:calc(100vh - 100px);
-    /*background-color:white;*/
+    width: 65vw;
+    height: 60vh;
+    background-color:white;
     justify-content: center;
-    vertical-align: middle;
-    align-items: center;
-    /* margin-left: 300px; */
-    /* margin-top: 70px; */
-}
-.maini{
-    background-color: white;
+    margin-left: 300px;
+    margin-top: 70px;
+    justify-content: space-between;
 }
 .maind{
+    height: 100%;
+    width: 60%;
     background-color:rgb(255, 153, 0);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 30px;
-    margin-left: -100px;
+    padding: 0;
 }
 .logog{
     width: 483px;
@@ -93,6 +85,7 @@ main{
     padding-left: 30px;
     padding-top: 30px;
     margin-bottom: 20px;
+    margin-left: 3px;
 }
 form{
 
@@ -103,9 +96,10 @@ form{
     height: 40px;
     font-size: 16px;
     margin-bottom: 20px;
-    border-radius:35px;
+    border-radius:25px;
     margin-left: 20px;
     background-color: bisque;
+    margin-left: 30px;
 }
 .maini input[type="text"]{
     width: 80%;
@@ -116,15 +110,8 @@ form{
     border-radius: 25px;
     margin-left: 20px;
     background-color: bisque;
+    margin-left: 30px;
 }
-
-.modal{
-    display: flex;
-    justify-content: center;
-    width: 65%;
-    height: 60%;
-}
-
 .label1{
     margin: 35px;
 }
@@ -139,7 +126,7 @@ form{
     font-size: 16px;
     margin-bottom: 20px;
     border-radius: 25px;
-    margin-left: 20px;
+    margin-left: 30px;
     background-color:orange;
     border-color: orange;
     
@@ -157,9 +144,12 @@ form{
     display: flex;
     justify-content: stretch;
 }
-body{
-    background-color: #FFC289;
+.menu1{
+    background-image:url('menu');
 }
-.maind img{
-    margin-left: 10px;
+.ult{
+    display: flex;
+    justify-content:space-between 15px ;
+    margin-left: 35px;
 }
+
