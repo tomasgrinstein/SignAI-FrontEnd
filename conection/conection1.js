@@ -3,21 +3,24 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
 
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
+    const username = document.getElementById("username").value;
 
     // Llama a la función para enviar los datos al back-end
-    loginUser(email, password);
+    loginUser(email, password, username);
 });
 
 function loginUser(email, password) {
     // Envía los datos al servidor usando fetch
-    fetch('https://sign-ai-web.vercel.app/Selector', {  // URL de tu API de inicio de sesión
+    fetch('https://sign-ai-web.vercel.app/insertar', {  // URL de tu API de inicio de sesión
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            mail: mail,
-            password: password
+
+            "Mail": email,
+            "Contraseña": password,
+            "NombreUsuario":username
         }),
     })
     .then(response => response.json())

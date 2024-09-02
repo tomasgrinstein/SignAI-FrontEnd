@@ -111,6 +111,17 @@ form{
     background-color: bisque;
     margin-left: 30px;
 }
+.maini input[type="email"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+    background-color: bisque;
+    margin-left: 30px;
+}
 .maini input[type="password"]{
     margin-left: 30px;
 }
