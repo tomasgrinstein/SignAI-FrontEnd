@@ -1,55 +1,74 @@
+header {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: -10px 10px;
+}
+.logo{
+  width: 140px;
+  /*height: 60px;*/
+  
+}
+
+.logo img{
+  height: 100%;
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
 .menuu {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    background-color: white;
-  }
-  .img5 {
-    width: 40px;
-    height: 40px;
-    margin-right: 25px;
-    margin-top: 15px;
-  }
-  .menuu li {
-    display: inline-block;
-  }
-  #dropdown.mostrar {
-    display: flex;
-  }
-  #dropdown {
-    display: none;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    background-color: white;
-    width: 100vw;
-    height: 160px;
-    justify-content: space-between;
-    z-index: 7;
-    padding-top: 50px;
-    padding-left: 10px;
-    padding-right: 10px;
-    align-items: center;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  background-color: white;
+}
+.img5 {
+  width: 40px;
+  height: 40px;
+  margin-right: 25px;
+  margin-top: 15px;
+}
+.menuu li {
+  display: inline-block;
+}
+#dropdown.mostrar {
+  display: flex;
+}
+#dropdown {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background-color: white;
+  width: 100vw;
+  height: 160px;
+  justify-content: space-between;
+  z-index: 7;
+  padding-top: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  align-items: center;
 }
 .ul1 {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .tr {
-    margin-top: 10px;
-    text-decoration: none;
-    color: inherit;
-    font-weight: bold;
+  margin-top: 10px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
 }
 .dev {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 #1 {
-    padding-right: 10px;
+  padding-right: 10px;
 }
-#bl{
-    text-decoration: none;
+#bl {
+  text-decoration: none;
 }

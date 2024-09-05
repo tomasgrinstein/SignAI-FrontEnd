@@ -6,8 +6,9 @@ function header() {
                 <img src="../imgs/logofi.png" >
             </div>
             <ul class="menuu">
-                    <li><a href="#"> <img src="../imgs/menuf.png" alt="" class="img5" id="fotito"></a>
-                    </li>
+                <li>
+                    <a href="#"> <img src="../imgs/menuf.png" alt="" class="img5" id="fotito"></a>
+                </li>
             </ul> 
         </header>
         <div id="dropdown">
@@ -30,10 +31,9 @@ function header() {
         </div>`
 };
 
-const body = document.querySelector("body");
-
-body.innerHTML += header();
 document.addEventListener('DOMContentLoaded', () => {
+    const body = document.querySelector("body");
+    body.innerHTML += header();
     const panelHeader = document.getElementById('fotito');
     const panelContent = document.getElementById('dropdown');
 
