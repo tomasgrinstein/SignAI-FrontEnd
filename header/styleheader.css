@@ -4,6 +4,12 @@ header {
   display: flex;
   justify-content: space-between;
   padding: -10px 10px;
+  margin-top: ;
+  position: fixed;
+  top: 0; /* Alinea el elemento en la parte superior */
+  left: 0; /* Alinea el elemento a la izquierda */
+  width: 100%; /* O usa un ancho específico si lo prefieres */
+
 }
 .logo{
   width: 140px;
