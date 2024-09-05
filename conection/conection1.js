@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
     loginUser(email, password, username);
 });
 
-function loginUser(email, password) {
+function loginUser(email, password,username) {
     // Envía los datos al servidor usando fetch
     fetch('https://sign-ai-web.vercel.app/insertar', {  // URL de tu API de inicio de sesión
         method: 'POST',
