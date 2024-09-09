@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background-image: url("../imgs/fondog.png");
+    background-size: cover;
+    overflow: hidden;
+    /* padding-top: 60px; */
+}
+
