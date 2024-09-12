@@ -239,5 +239,11 @@ main {
 }
 .btn2{
     align-items: center;
-    
+    background-color: rgb(245, 134, 7);
+    border: transparent;
+}
+.txt{
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
 }
