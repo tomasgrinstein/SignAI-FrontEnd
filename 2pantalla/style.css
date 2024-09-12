@@ -8,6 +8,11 @@ body{
     background-image: url("../imgs/fondo.png");
     background-size: cover;
     overflow: hidden;
+    padding-top: 50px;
+
+}
+.main{
+    
 }
 
 .menu{

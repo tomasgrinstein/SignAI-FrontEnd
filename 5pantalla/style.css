@@ -225,3 +225,19 @@ main {
     align-items: center;
 
 }
+.btns{
+    display: flex;
+    justify-content: center;
+    display: grid;
+    gap: 20px;
+    align-items: center;
+}
+.tra{
+    justify-content: center;
+    align-items: center;
+    padding-left: 55px;
+}
+.btn2{
+    align-items: center;
+    
+}
