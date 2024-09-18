@@ -16,6 +16,10 @@ header {
   /*height: 60px;*/
   
 }
+.logo {
+    width: 140px;
+    /*height: 60px;*/
+}
 
 .logo img{
   height: 100%;
