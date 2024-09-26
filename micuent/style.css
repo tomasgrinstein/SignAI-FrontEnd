@@ -22,5 +22,96 @@ body{
     padding-left: 90px;
 }
 
+.label1, .label2 {
+    display: block; /* Asegura que las etiquetas ocupen toda la línea */
+    margin-left: 30px; /* Margen para las etiquetas */
+    margin-bottom: 5px; /* Espacio entre la etiqueta y el input */
+}
 
-
+input[type="text"],
+input[type="password"] {
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 30px; /* Margen para los inputs */
+    background-color: bisque;
+}
+.label1 input[type="password"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius:25px;
+    margin-left: 20px;
+    background-color: bisque;
+}
+.maini input[type="text"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+    background-color: bisque;
+    margin-left: 30px;
+}
+.maini input[type="password"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius:25px;
+    margin-left: 20px;
+    background-color: bisque;
+}
+.maini input[type="text"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+    background-color: bisque;
+    margin-left: 30px;
+}
+.p input[type="username"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius:25px;
+    margin-left: 20px;
+    background-color: bisque;
+}
+.maini input[type="text"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+    background-color: bisque;
+    margin-left: 30px;
+}
+.btnn{
+    margin-top: 10px;
+    width: 50%;
+    padding-right: 10px;
+    height: 50px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 30px;
+    background-color:orange;
+    border-color: orange;
+    
+}
