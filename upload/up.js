@@ -1,4 +1,4 @@
-function header() {
+function upload() {
     return `
     
     <label class="custum-file-upload" for="file">
@@ -15,16 +15,13 @@ function header() {
 
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector("body");
-    body.innerHTML += header();
+    body.innerHTML += upload();
     const panelHeader = document.getElementById('fotito');
     const panelContent = document.getElementById('dropdown');
 
     panelHeader.addEventListener('click', () => {
-        // Alternar la clase 'show' para mostrar/ocultar el contenido
         panelContent.classList.toggle('mostrar');
     });
-
-    // Cerrar el panel si se hace clic fuera de él
     document.addEventListener('click', (event) => {
         if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
             panelContent.classList.remove('mostrar');
