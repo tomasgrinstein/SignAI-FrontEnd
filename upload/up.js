@@ -1,8 +1,8 @@
 function upload() {
     return `
     
-    <label class="custum-file-upload" for="file">
-    <div class="icon">
+    <label class="custum-file-upload" for="file" id ="drop">
+    <div class="icon" >
         <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24">
             <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
             <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
@@ -19,18 +19,20 @@ function upload() {
     
 };
 
+/*
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector("body");
     body.innerHTML += upload();
-    const panelHeader = document.getElementById('fotito');
-    const panelContent = document.getElementById('dropdown');
+    const panelheader = document.getElementById('fot');
+    const panelcontent = document.getElementById('drop');
 
-    panelHeader.addEventListener('click', () => {
-        panelContent.classList.toggle('mostrar');
+    panelheader.addEventListener('click', () => {
+        panelcontent.classList.toggle('mostrar');
     });
     document.addEventListener('click', (event) => {
-        if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
-            panelContent.classList.remove('mostrar');
+        if (!panelheader.contains(event.target) && !panelcontent.contains(event.target)) {
+            panelcontent.classList.remove('mostrar');
         }
     });
 });
+*¨/

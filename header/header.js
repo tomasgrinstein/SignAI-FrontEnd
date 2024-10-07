@@ -31,21 +31,37 @@ function header() {
         </div>`
 };
 
-document.addEventListener('DOMContentLoaded', () => {
-    const body = document.querySelector("body");
-    body.innerHTML += header();
-    const panelHeader = document.getElementById('fotito');
-    const panelContent = document.getElementById('dropdown');
+function agregarHeader() {
+    document.addEventListener('DOMContentLoaded', () => {
+        const body = document.querySelector("body");
+        body.innerHTML += header();
+        const panelHeader = document.getElementById('fotito');
+        const panelContent = document.getElementById('dropdown');
 
-    panelHeader.addEventListener('click', () => {
-        // Alternar la clase 'show' para mostrar/ocultar el contenido
-        panelContent.classList.toggle('mostrar');
-    });
+        panelHeader.addEventListener('click', () => {
+            // Alternar la clase 'show' para mostrar/ocultar el contenido
+            panelContent.classList.toggle('mostrar');
+        });
 
-    // Cerrar el panel si se hace clic fuera de él
-    document.addEventListener('click', (event) => {
-        if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
-            panelContent.classList.remove('mostrar');
-        }
+        // Cerrar el panel si se hace clic fuera de él
+        document.addEventListener('click', (event) => {
+            if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
+                panelContent.classList.remove('mostrar');
+            }
+        });
+
+        body.innerHTML += upload();
+        const panelheader = document.getElementById('fot');
+        const panelcontent = document.getElementById('drop');
+
+        panelheader.addEventListener('click', () => {
+            panelcontent.classList.toggle('mostrar');
+        });
+        document.addEventListener('click', (event) => {
+            if (!panelheader.contains(event.target) && !panelcontent.contains(event.target)) {
+                panelcontent.classList.remove('mostrar');
+            }
+        });
+
     });
-});
+}
