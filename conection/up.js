@@ -24,12 +24,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function uploadVideo(file) {
         const formData = new FormData();
-        formData.append('video', file); // 'video' es el nombre del campo que recibirá el archivo en el backend
+        formData.append('video', file); 
 
         console.log("Preparando para enviar el archivo al backend...");
         
         // Envía el archivo al servidor usando fetch
-        fetch('https://tu-backend.com/upload', { // Cambia esta URL a la de tu API
+        fetch('', { // Cambia esta URL a la de tu API
             method: 'POST',
             body: formData // El cuerpo es el FormData
         })
