@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../global/style.css">
     <link rel="stylesheet" href="../header/styleheader.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <script src="../header/header.js"></script>
+    <script src="../conection/conectionlg.js"></script>
     <script>
-         // agregarHeader();
+        // agregarHeader();
 
-         document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             const body = document.querySelector("body");
             body.innerHTML += header();
             const panelHeader = document.getElementById('fotito');
@@ -34,33 +38,32 @@
             });
         });
     </script>
-       
-    
+
+
     <main class="main">
         <div class="maini">
-            <p class="lp">Log-in</p>        
-         <form action="/login" method="post" id="signinForm">
-            <label for="mail" class="label1">Email</label>
-            <input type="text" id="email" name="username" required>
+            <p class="lp">Log-in</p>
+            <form id="signinform">
+                <label for="mail" class="label1">Email</label>
+                <input type="text" id="email" name="username" required>
 
-            <label for="password" class="label2">Password</label>
-            <input type="password" id="password" name="password" required>
-            
-         <div>
-            <button type="submit" class="btnn">Log-in</button>
-         </div>
-         <div class="ult">
-            <p>Don´t have an accunt?</p>
-            <a href="/3pantalla/index.html">Create one</a>
-         </div> 
-        
-        
-        </form>
+                <label for="password" class="label2">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <div>
+                    <button type="submit" class="btnn">Log-in</button>
+                </div>
+                <div class="ult">
+                    <p>Don´t have an accunt?</p>
+                    <a href="/3pantalla/index.html">Create one</a>
+                </div>
+            </form>
         </div>
         <div class="maind">
             <img src="../imgs/logo2.png" class="logog">
-        <p class="text">SignAi offers an accurate translation from sign language to english text</p>
+            <p class="text">SignAi offers an accurate translation from sign language to english text</p>
         </div>
     </main>
 </body>
+
 </html>

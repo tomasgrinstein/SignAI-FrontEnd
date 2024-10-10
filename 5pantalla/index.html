@@ -15,7 +15,7 @@
 </head>
 <body>
     <script src="../header/header.js"></script>
-    <script src="../upload/up.js"></script>
+    <script src="../upload/up.js"></script> 
     <script src="../conection/up.js"></script>
 
     <script>
@@ -84,21 +84,13 @@
         document.addEventListener('DOMContentLoaded', function() {
     const btnUpload = document.getElementById('btn1');
     const fileInput = document.getElementById('file');
-
-    // Escucha el clic en el botón de subida
-    btnUpload.addEventListener('click', function() {
-        console.log("Botón de subir clickeado. Abriendo el selector de archivos...");
-        fileInput.click(); // Simula un clic en el input de archivo
-    });
-
-    // Escucha el cambio en el input de archivo
+  
     fileInput.addEventListener('change', function() {
         const file = fileInput.files[0];
         if (file) {
             console.log('Video seleccionado:', file.name);
             console.log('Tamaño del archivo:', file.size, 'bytes');
             console.log('Tipo de archivo:', file.type);
-            // Llama a la función para enviar el archivo al back-end
             uploadVideo(file);
         } else {
             console.log('No se ha seleccionado ningún archivo.');
@@ -107,27 +99,29 @@
 
     function uploadVideo(file) {
         const formData = new FormData();
-        formData.append('video', file); // 'video' es el nombre del campo que recibirá el archivo en el backend
+        formData.append('video', file); 
+        formData.append('Mail_Usuario', "ECHU13@gmail.com")
+
+        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkVDSFUxM0BnbWFpbC5jb20iLCJpYXQiOjE3MjczNjI5NjksImV4cCI6MzUyNzM2Mjk2OX0.TPY5Sk8IoeN7tv3dxLcKUMWOGffWU44HDF7qOAKc_sM";
 
         console.log("Preparando para enviar el archivo al backend...");
-        
-        // Envía el archivo al servidor usando fetch
-        fetch('http://locahost:3000/CrearVideo', { // Cambia esta URL a la de tu API
+        fetch('http://localhost:3000/CrearVideo', { 
             method: 'POST',
-            body: formData // El cuerpo es el FormData
+            headers: {
+                "Authorization": `Bearer ${token}` 
+            },
+            body: formData 
         })
         .then(response => {
-            console.log('Respuesta del servidor recibida:', response); // Log de la respuesta
+            console.log('Respuesta del servidor recibida:', response); 
             return response.json();
         })
         .then(data => {
-            console.log('Datos devueltos por el servidor:', data); // Log de los datos devueltos
+            console.log('Datos devueltos por el servidor:', data); 
             if (data.success) {
-                // Maneja la respuesta del servidor si la subida fue exitosa
                 console.log("Archivo subido exitosamente:", data);
                 alert("Archivo subido exitosamente: " + data.message);
             } else {
-                // Muestra un mensaje de error si no fue exitoso
                 alert("Error: " + data.message);
             }
         })
