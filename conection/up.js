@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log("Preparando para enviar el archivo al backend...");
         
         // Envía el archivo al servidor usando fetch
-        fetch('https://tu-backend.com/upload', { // Cambia esta URL a la de tu API
+        fetch('https://sign-ai-web.vercel.app/conversacion/CrearVideo', { // Cambia esta URL a la de tu API
             method: 'POST',
             body: formData // El cuerpo es el FormData
         })
