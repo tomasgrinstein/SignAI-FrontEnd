@@ -182,7 +182,9 @@
   #1 {
     padding-right: 10px;
   }
-  #bl{
+#bl{
     text-decoration: none;
   }
-  
+.btnt{
+  text-decoration: none;
+}
