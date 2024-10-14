@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Tamaño del archivo:', file.size, 'bytes');
             console.log('Tipo de archivo:', file.type);
             // Llama a la función para enviar el archivo al back-end
-            uploadVideo(file);
+            uploadVideo(file); DataView
         } else {
             console.log('No se ha seleccionado ningún archivo.');
         }
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function uploadVideo(file) {
         const formData = new FormData();
-        formData.append('video', file); // 'video' es el nombre del campo que recibirá el archivo en el backend
+        formData.append('video', file); 
 
         console.log("Preparando para enviar el archivo al backend...");
         
