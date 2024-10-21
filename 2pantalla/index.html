@@ -43,7 +43,7 @@
     <main class="main">
         <div class="maini">
             <p class="lp">Log-in</p>
-            <form id="signinform">
+            <div id="signinform">
                 <label for="mail" class="label1">Email</label>
                 <input type="text" id="email" name="username" required>
 
@@ -51,13 +51,17 @@
                 <input type="password" id="password" name="password" required>
 
                 <div>
-                    <button type="submit" class="btnn">Log-in</button>
+                    <button 
+                        type="submit" 
+                        class="btnn"
+                        onclick="login()"
+                    >Log-in</button>
                 </div>
                 <div class="ult">
                     <p>Don´t have an accunt?</p>
                     <a href="/3pantalla/index.html">Create one</a>
                 </div>
-            </form>
+            </div>
         </div>
         <div class="maind">
             <img src="../imgs/logo2.png" class="logog">
