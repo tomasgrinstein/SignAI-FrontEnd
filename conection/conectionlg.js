@@ -26,15 +26,10 @@ function login(event) {
     })
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
                 console.log('Login exitoso:', data);
                 alert("Inicio de sesión exitoso!");
                 localStorage.setItem('token', data.token);
-                window.location.href = '/dashboard.html';
-            } else {
-                console.log('Error en el login:', data.message);
-                alert("Error: " + data.message);
-            }
+                window.location.href = '../5pantalla';
         })
         .catch(error => {
             console.error('Error al intentar iniciar sesión:', error);

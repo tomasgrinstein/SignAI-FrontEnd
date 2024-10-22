@@ -102,7 +102,7 @@
         formData.append('video', file); 
         formData.append('Mail_Usuario', "ECHU13@gmail.com")
 
-        const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IkVDSFUxM0BnbWFpbC5jb20iLCJpYXQiOjE3MjczNjI5NjksImV4cCI6MzUyNzM2Mjk2OX0.TPY5Sk8IoeN7tv3dxLcKUMWOGffWU44HDF7qOAKc_sM";
+        const token = localStorage.getItem("token");
 
         console.log("Preparando para enviar el archivo al backend...");
         fetch('http://localhost:3000/CrearVideo', { 
