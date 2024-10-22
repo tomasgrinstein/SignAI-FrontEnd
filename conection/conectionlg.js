@@ -7,12 +7,12 @@ function login(event) {
     // event.preventDefault();
     console.log("AAAAAAAAAAA");
 
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+    const Mail = document.getElementById('email').value;
+    const Contraseña = document.getElementById('password').value;
 
     const loginData = {
-        email: email,
-        password: password
+        Mail: Mail,
+        Contraseña: Contraseña
     };
 
     console.log(loginData)
