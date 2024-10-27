@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../global/style.css">
+    <link rel="stylesheet" href="../header/styleheader.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <script src="../header/header.js"></script>
+    <script src="../conection/conectionlg.js"></script>
+    <script>
+        // agregarHeader();
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.querySelector("body");
+            body.innerHTML += header();
+            const panelHeader = document.getElementById('fotito');
+            const panelContent = document.getElementById('dropdown');
+
+            panelHeader.addEventListener('click', () => {
+                // Alternar la clase 'show' para mostrar/ocultar el contenido
+                panelContent.classList.toggle('mostrar');
+            });
+
+            // Cerrar el panel si se hace clic fuera de él
+            document.addEventListener('click', (event) => {
+                if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
+                    panelContent.classList.remove('mostrar');
+                }
+            });
+            
+
+        });
+    </script>
+
+
+<main class="main">
+    <div class="mainiz">
+        <button class="btnl" id="bt"> 
+            <p class="textito">Sign-Out</p>
+        </button>
+    </div>
+    <div class="mainde">
+        <div class="maind2">
+            <div class="ta">
+                <p class="to">
+                    Edit profile
+                </p>
+            </div>
+            <div class="po">
+                <form id="loginForm">
+                    <label for="username" class="label1">Username</label>
+                    <input type="text" id="edUsername" name="username" required>
+        
+                    <label for="password" class="label2">Mail</label>
+                    <input type="email" id="edEmail" name="password" required>
+        
+                    <label for="password" class="label2">Password</label>
+                    <input type="password" id="edPassword" name="password" required>
+        
+                <div>
+                    <button type="submit" class="btnn" id="bt">Sign-in</button>
+                </div> 
+                
+                
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</main>
+    
+</body>
+
+</html>

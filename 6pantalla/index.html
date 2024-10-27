@@ -36,6 +36,39 @@
                     panelContent.classList.remove('mostrar');
                 }
             });
+            getTranslation();
+
+            function getTranslation() {
+            fetch('https://sign-ai-web.vercel.app/getTexto', {  
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': 'Bearer ' + localStorage.getItem('token')
+                }
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Error en la red: ' + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Textos recibidos:', data);
+                if (data.success) {
+                    const texto43 = data.texts.find(texto => texto.id === 43);
+                    if (texto43) {
+                        document.getElementById("cuadroTexto").value = texto43.texto;  
+                    } else {
+                        alert("No se encontró el texto con ID 43");
+                    }
+                } else {
+                    alert("Error: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error('Error al obtener los textos:', error);
+                alert("Error de red: " + error.message);
+            });
         });
     </script>
 

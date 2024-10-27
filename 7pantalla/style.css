@@ -1,0 +1,257 @@
+.logo {
+    width: 140px;
+    /*height: 60px;*/
+}
+
+.logo img {
+    height: 100%;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+*{
+    box-sizing: border-box;
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: "Montserrat", sans-serif;
+    }
+    body{
+        background-image: url("../imgs/1.png");
+        background-size: cover;
+        overflow: hidden;
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+    
+    }
+    .main{
+        
+    }
+    
+    .menu{
+        /*width: 100%;
+        height: 40px;*/
+        justify-content: right;
+       
+    }
+    .menu img{
+        width: 40px;
+        height: 40px;
+        margin-right: 25px;
+        margin-top: 15px;
+    }
+    main{
+        display: flex;
+        width: 70vw;
+        height: 80vh;
+        background-color:white;
+        justify-content: center;
+        margin-top: 40px;
+        text-align: center;
+        border: 1px solid gray; 
+    }
+    .maind{
+        height: 100%;
+        width: 60%;
+        background-color:rgb(255, 153, 0);
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 30px;
+        padding: 0;
+    }
+    .logog{
+        width: 483px;
+        height: 174px;
+        padding-left: 90px;
+        padding-top: 70px;
+        margin-bottom: px;
+        padding-right: 80px;
+    }
+    .logog img{
+      
+    }
+    .maind{
+        padding:0 ;
+    }
+    .text{
+        width: 80%;
+        height: 80%;
+        padding-left: 100px;
+        color: white;
+    }
+    .lp{
+        font-size: 30px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700 ;
+        padding-left: 30px;
+        padding-top: 30px;
+        margin-bottom: 20px;
+        margin-left: 3px;
+    }
+    form{
+    
+    }
+    .maini input[type="password"]{
+        width: 80%;
+        padding-right: 10px;
+        height: 40px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-radius:25px;
+        margin-left: 20px;
+        background-color: bisque;
+        margin-left: 30px;
+    }
+    .maini input[type="text"]{
+        width: 80%;
+        padding-right: 10px;
+        height: 40px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-radius: 25px;
+        margin-left: 20px;
+        background-color: bisque;
+        margin-left: 30px;
+    }
+    .label1{
+        margin: 35px;
+    }
+    .label2{
+        margin: 35px;
+    }
+    .btnn{
+        margin-top: 10px;
+        width: 80%;
+        padding-right: 10px;
+        height: 40px;
+        font-size: 16px;
+        margin-bottom: 20px;
+        border-radius: 25px;
+        margin-left: 30px;
+        background-color:orange;
+        border-color: orange;
+        
+    }
+    .btnn{
+        color: white;
+    }
+    .no{
+        margin-left: 25px;
+    }
+    .crear{
+       
+    }
+    .abajo{
+        display: flex;
+        justify-content: stretch;
+    }
+    .menu1{
+        background-image:url('menu');
+    }
+    .ult{
+        display: flex;
+        justify-content:space-between 15px ;
+        margin-left: 35px;
+    }
+    
+.mainiz{
+    height: 100%;
+    width: 20%;
+    border: 1px solid gray;
+    display:flex;
+    justify-content: end;
+    align-items: end;
+}
+.mainde{
+    height: 100%;
+    width: 80%;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.textito{
+    font-weight: 700;
+    text-decoration: none;
+}
+.btnl {
+    gap: 10px;
+    width: 60%;
+    height: 5%;
+    padding: 5px;
+    margin: 10px;
+    background-color: rgb(255, 153, 0);
+    border: 0px;
+    border-radius: 25px;
+    align-items: center;
+    margin-right: 40px;
+
+}
+.maind2{
+    width: 90%;
+    height: 90%;
+    background-color: rgb(233, 173, 82);
+    border-radius: 25px;
+    align-items: center;
+}
+.to{
+    font-weight: 700;
+    font-size: 30px;
+}
+.ta{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content:center;
+    align-items: end;
+}
+.po{
+    width: 100%;
+    height: 80%;
+}
+.po input[type="password"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius:25px;
+    margin-left: 20px;
+    background-color: bisque;
+}
+.po input[type="text"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+    background-color: bisque;
+    margin-left: 30px;
+}
+.po input[type="email"]{
+    width: 80%;
+    padding-right: 10px;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    margin-left: 20px;
+    background-color: bisque;
+    margin-left: 30px;
+}
+.po input[type="password"]{
+    margin-left: 30px;
+}
+.po{
+
+}
+.label1{
+    margin: 35px;
+}
+.label2{
+    margin: 35px;
+}
