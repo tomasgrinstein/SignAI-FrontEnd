@@ -16,13 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function editUser(email, password, username) {
+function editUser(Mail, Contraseña, NombreUsuario) {
     console.log("Función editUser llamada");
-    const body = { "Mail": email, "Contraseña": password, "NombreUsuario": username };
+    const body = { "Mail": Mail, "Contraseña": Contraseña, "NombreUsuario": NombreUsuario };
     console.log("Enviando datos:", body);
 
-    fetch('https://sign-ai-web.vercel.app/editar', {
-        method: 'PUT',
+    fetch('https://sign-ai-web.vercel.app/Update', {
+        method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + localStorage.getItem('token')

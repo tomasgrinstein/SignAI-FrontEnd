@@ -35,10 +35,9 @@
             getTranslation(); // Llama a la función aquí
 
             function getTranslation() {
-                fetch('https://sign-ai-web.vercel.app/43/getTexto', {  
+                fetch('https://sign-ai-web.vercel.app/:id/getTexto', {  
                     method: 'GET',
                     headers: {
-                        'Content-Type': 'application/json',
                         'Authorization': 'Bearer ' + localStorage.getItem('token')
                     }
                 })
