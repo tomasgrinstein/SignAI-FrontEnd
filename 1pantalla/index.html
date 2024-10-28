@@ -32,7 +32,7 @@
         <ul class="ul1">
             SingAi
             <a href="../1pantalla/index.html" class="tr">Inicio</a>
-            <a href="" class="tr">Mi Cuenta</a>
+            <a href="../7pantalla/index.html" class="tr">Mi Cuenta</a>
             <a href="" class="tr">Cerrar Sesion</a>
         </ul>
         <ul class="ul1">
@@ -48,14 +48,13 @@
                     <p class="text1">
                        Your free to use sign language to text translator
                     </p>
-                    <a href="../4pantalla/index.html">
+                    
                         <button class="btnt" id="bl"> 
-                            Translate
+                            <p class="textito">Translate</p>
                         </button>
-                    </a>
                     <a href="../2pantalla/index.html">
                         <button class="btnl" id="bt"> 
-                            Log-In
+                            <p class="textito">Log-In</p>
                         </button>
                     </a>
               </div>
@@ -64,7 +63,24 @@
             <img src="../imgs/women.png" alt="mujer1">
         </div>
     </main>
+    <script>
+        document.getElementById('bl').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita la acción predeterminada del botón
 
+            // Verificar si el token existe en localStorage
+            const token = localStorage.getItem('token');
+
+            if (token) {
+                
+                // Redirigir a la página de traducción
+                window.location.href = '../4pantalla/index.html';
+            } else {
+                alert('Por favor, inicia sesión para continuar.');
+                // Redirigir a la página de inicio de sesión
+                window.location.href = '../2pantalla/index.html';
+            }
+        });
+    </script>
 <script src="btn.js"></script>
 </body>
 </html>

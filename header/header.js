@@ -21,7 +21,7 @@ function header() {
             <ul class="ul1">
                 SingAi
                 <a href="../1pantalla/index.html" class="tr">Inicio</a>
-                <a href="" class="tr">Mi Cuenta</a>
+                <a href="../7pantalla/index.html" class="tr">Mi Cuenta</a>
                 <a href="" class="tr">Cerrar Sesion</a>
             </ul>
             <ul class="ul1">

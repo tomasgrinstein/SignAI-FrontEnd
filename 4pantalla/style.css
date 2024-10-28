@@ -185,4 +185,8 @@ main {
 }
 #bl{
     text-decoration: none;
+    margin-top: 30px;
+}
+.textito{
+    font-weight: 700;
 }
