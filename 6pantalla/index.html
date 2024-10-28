@@ -35,7 +35,7 @@
             getTranslation(); // Llama a la función aquí
 
             function getTranslation() {
-                fetch('https://sign-ai-web.vercel.app/:id/getTexto', {  
+                fetch('https://sign-ai-web.vercel.app/43/getTexto', {  
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -49,15 +49,11 @@
                 })
                 .then(data => {
                     console.log('Textos recibidos:', data);
-                    if (data.success) {
-                        const texto43 = data.texts.find(texto => texto.id === 43);
-                        if (texto43) {
-                            document.getElementById("cuadroTexto").value = texto43.texto;  
-                        } else {
-                            alert("No se encontró el texto con ID 43");
-                        }
+                    const texto43 = data.Texto_Devuelto  
+                    if (texto43) {
+                        document.getElementById("cuadroTexto").value = texto43;  
                     } else {
-                        alert("Error: " + data.message);
+                        alert("No se encontró el texto con ID 43");
                     }
                 })
                 .catch(error => {

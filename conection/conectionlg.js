@@ -24,7 +24,11 @@ function login(event) {
         },
         body: JSON.stringify(loginData)
     })
-        .then(response => response.json())
+        .then(response => {
+            console.log(response.status)
+            if(!response.ok) throw Error("algo salió mal")
+            return response.json()
+        })
         .then(data => {
                 console.log('Login exitoso:', data);
                 alert("Inicio de sesión exitoso!");

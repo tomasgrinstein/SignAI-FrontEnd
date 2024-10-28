@@ -22,7 +22,7 @@ function editUser(Mail, Contraseña, NombreUsuario) {
     console.log("Enviando datos:", body);
 
     fetch('https://sign-ai-web.vercel.app/Update', {
-        method: 'POST',
+        method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
             'Authorization': 'Bearer ' + localStorage.getItem('token')
