@@ -28,23 +28,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log("Preparando para enviar el archivo al backend...");
         
-        // Envía el archivo al servidor usando fetch
-        fetch('https://sign-ai-web.vercel.app/conversacion/CrearVideo', { // Cambia esta URL a la de tu API
+        fetch('https://sign-ai-web.vercel.app/CrearVideo', { 
             method: 'POST',
-            body: formData // El cuerpo es el FormData
+            body: formData 
         })
         .then(response => {
-            console.log('Respuesta del servidor recibida:', response); // Log de la respuesta
+            console.log('Respuesta del servidor recibida:', response); 
             return response.json();
         })
         .then(data => {
-            console.log('Datos devueltos por el servidor:', data); // Log de los datos devueltos
-            if (data.success) {
-                // Maneja la respuesta del servidor si la subida fue exitosa
+            console.log('Datos devueltos por el servidor:', data);
+            if (data) {
                 console.log("Archivo subido exitosamente:", data);
                 alert("Archivo subido exitosamente: " + data.message);
             } else {
-                // Muestra un mensaje de error si no fue exitoso
                 alert("Error: " + data.message);
             }
         })
