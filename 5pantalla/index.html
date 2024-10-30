@@ -95,7 +95,7 @@
 
     function uploadVideo(file) {
         const formData = new FormData();
-        formData.append('Vide_Inicial', 'video'); 
+        formData.append("video", file); 
         formData.append('Mail_Usuario', "ECHU13@gmail.com")
 
         const token = localStorage.getItem("token");
