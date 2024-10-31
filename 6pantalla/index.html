@@ -32,10 +32,14 @@
                 }
             });
 
-            getTranslation(); // Llama a la función aquí
-
             function getTranslation() {
-                fetch('https://sign-ai-web.vercel.app/43/getTexto', {  
+                const videoId = localStorage.getItem('videoId');
+                if (!videoId) {
+                    alert("No se encontró el ID del video en localStorage.");
+                    return;
+                }
+
+                fetch(`https://sign-ai-web.vercel.app/${videoId}/getTexto`, {  
                     method: 'GET',
                     headers: {
                         'Authorization': 'Bearer ' + localStorage.getItem('token')
@@ -49,11 +53,11 @@
                 })
                 .then(data => {
                     console.log('Textos recibidos:', data);
-                    const texto43 = data.Texto_Devuelto  
-                    if (texto43) {
-                        document.getElementById("cuadroTexto").value = texto43;  
+                    const textoDevuelto = data.Texto_Devuelto;  
+                    if (textoDevuelto) {
+                        document.getElementById("cuadroTexto").value = textoDevuelto;  
                     } else {
-                        alert("No se encontró el texto con ID 43");
+                        alert("No se encontró el texto para el ID: " + videoId);
                     }
                 })
                 .catch(error => {
@@ -61,6 +65,7 @@
                     alert("Error de red: " + error.message);
                 });
             }
+
         });
     </script>
 
