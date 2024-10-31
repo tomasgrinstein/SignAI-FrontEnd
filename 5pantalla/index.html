@@ -114,11 +114,13 @@
         })
         .then(data => {
             console.log('Datos devueltos por el servidor:', data); 
-            if (data) {
+            if (data && data.id) {
                 console.log("Archivo subido exitosamente:", data);
+                localStorage.setItem('videoId', data.id);
+                console.log('ID guardado en localStorage:', data.id);
                 alert("Archivo subido exitosamente: " + data.message);
             } else {
-                alert("Error: " + data.message);
+                alert("Error: " + (data.message || "ID no disponible."));
             }
         })
         .catch(error => {

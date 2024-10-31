@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function uploadVideo(file) {
         const formData = new FormData();
         formData.append('video', file); 
-
+    
         console.log("Preparando para enviar el archivo al backend...");
         
         fetch('https://sign-ai-web.vercel.app/CrearVideo', { 
@@ -38,16 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(data => {
             console.log('Datos devueltos por el servidor:', data);
-            if (data) {
+            if (data && data.id) {
                 console.log("Archivo subido exitosamente:", data);
+                localStorage.setItem('videoId', data.id);
+                console.log('ID guardado en localStorage:', data.id);
                 alert("Archivo subido exitosamente: " + data.message);
             } else {
-                alert("Error: " + data.message);
+                alert("Error: " + (data.message || "ID no disponible."));
             }
         })
         .catch(error => {
             console.error('Error:', error);
             alert("Error al subir el archivo: " + error.message);
         });
+        
     }
+    
 });
