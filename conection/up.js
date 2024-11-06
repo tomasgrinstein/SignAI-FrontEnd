@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function uploadVideo(file) {
         const formData = new FormData();
         formData.append('video', file); 
+        formData.append('Mail_Usuario',"ECHU13@gmail.com")
     
         console.log("Preparando para enviar el archivo al backend...");
         
