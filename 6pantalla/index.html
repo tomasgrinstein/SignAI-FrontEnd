@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../global/style.css">
     <link rel="stylesheet" href="../header/styleheader.css">
@@ -13,25 +15,46 @@
 </head>
 
 <body>
+    <!-- Carga de Scripts -->
     <script src="../header/header.js"></script>
     <script src="../conection/conectionlg.js"></script>
+
+    <main class="main">
+        <div>
+            <p class="t">All Done!</p>
+        </div>
+        <div>
+            <label for="cuadroTexto"></label>
+            <textarea id="cuadroTexto" placeholder=""></textarea>
+        </div>
+        <a href="../5pantalla/index.html">
+            <button class="btnl" id="bt">
+                <p class="x">Go Back!</p>
+            </button>
+        </a>
+    </main>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const body = document.querySelector("body");
-            body.innerHTML += header(); // Asegúrate de que la función `header` esté definida
+            body.innerHTML += header();
+
             const panelHeader = document.getElementById('fotito');
             const panelContent = document.getElementById('dropdown');
 
+            // Muestra/oculta el contenido del panel al hacer clic en el header
             panelHeader.addEventListener('click', () => {
                 panelContent.classList.toggle('mostrar');
             });
 
+            // Cierra el panel si se hace clic fuera
             document.addEventListener('click', (event) => {
                 if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
                     panelContent.classList.remove('mostrar');
                 }
             });
 
+            // Función para obtener la traducción del video
             function getTranslation() {
                 const videoId = localStorage.getItem('videoId');
                 if (!videoId) {
@@ -52,10 +75,9 @@
                     return response.json();
                 })
                 .then(data => {
-                    console.log('Textos recibidos:', data);
-                    const textoDevuelto = data.Texto_Devuelto;  
+                    const textoDevuelto = data.Texto_Devuelto;
                     if (textoDevuelto) {
-                        document.getElementById("cuadroTexto").value = textoDevuelto;  
+                        document.getElementById("cuadroTexto").value = textoDevuelto;
                     } else {
                         alert("No se encontró el texto para el ID: " + videoId);
                     }
@@ -66,23 +88,10 @@
                 });
             }
 
+            // Llama a la función para obtener la traducción
+            getTranslation();
         });
     </script>
-
-    <main class="main">
-        <div>
-            <p class="t"> All Done!</p>
-        </div>
-        <div>
-            <label for="cuadroTexto"></label>
-            <textarea id="cuadroTexto" placeholder=""></textarea>
-        </div>
-        <a href="../5pantalla/index.html">
-            <button class="btnl" id="bt"> 
-                <p class="x">Go Back!</p>
-            </button>
-        </a>
-    </main>
 </body>
 
 </html>

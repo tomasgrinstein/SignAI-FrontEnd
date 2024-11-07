@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../header/styleheader.css">
     <link rel="stylesheet" href="../global/style.css">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <script src="../header/header.js"></script>
     <script src="../conection/conection1.js"></script>
@@ -44,9 +49,18 @@
 
             <label for="password" class="label2">Mail</label>
             <input type="email" id="email" name="email" required>
+    <main>
+        <div class="maini">
+            <p class="lp">Sign-in</p>        
+            <form id="loginForm">
+                <label for="username" class="label1">Username</label>
+                <input type="text" id="username" name="username" required>
 
-            <label for="password" class="label2">Password</label>
-            <input type="password" id="password" name="password" required>
+                <label for="email" class="label2">Mail</label> <!-- Corregido el 'name' aquí -->
+                <input type="email" id="email" name="email" required>
+
+                <label for="password" class="label2">Password</label>
+                <input type="password" id="password" name="password" required>
 
          <div>
             
@@ -59,11 +73,38 @@
         
         
         </form>
+                <div>
+                    <button type="submit" class="btnn" id="bt">Sign-in</button>
+                </div> 
+            </form>
         </div>
+        
         <div class="maind">
-            <img src="../imgs/logo2.png" class="logog">
-        <p class="text">SignAi offers an accurate translation from sign language to english text</p>
+            <img src="../imgs/logo2.png" class="logog" loading="lazy" alt="Logo">
+            <p class="text">SignAi offers an accurate translation from sign language to English text</p>
         </div>
     </main>
+
+    <!-- Scripts -->
+    <script src="../header/header.js" defer></script>
+    <script src="../conection/conection1.js" defer></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.querySelector("body");
+            body.innerHTML += header(); // Asegúrate de que 'header()' esté definida
+            const panelHeader = document.getElementById('fotito');
+            const panelContent = document.getElementById('dropdown');
+
+            panelHeader.addEventListener('click', () => {
+                panelContent.classList.toggle('mostrar');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
+                    panelContent.classList.remove('mostrar');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

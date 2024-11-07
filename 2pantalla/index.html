@@ -6,39 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../global/style.css">
     <link rel="stylesheet" href="../header/styleheader.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" 
+          rel="stylesheet" async>
 </head>
 
 <body>
-    <script src="../header/header.js"></script>
-    <script src="../conection/conectionlg.js"></script>
-    <script>
-        // agregarHeader();
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const body = document.querySelector("body");
-            body.innerHTML += header();
-            const panelHeader = document.getElementById('fotito');
-            const panelContent = document.getElementById('dropdown');
-
-            panelHeader.addEventListener('click', () => {
-                // Alternar la clase 'show' para mostrar/ocultar el contenido
-                panelContent.classList.toggle('mostrar');
-            });
-
-            // Cerrar el panel si se hace clic fuera de él
-            document.addEventListener('click', (event) => {
-                if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
-                    panelContent.classList.remove('mostrar');
-                }
-            });
-        });
-    </script>
-
 
     <main class="main">
         <div class="maini">
@@ -58,16 +37,39 @@
                     >Log-in</button>
                 </div>
                 <div class="ult">
-                    <p>Don´t have an accunt?</p>
+                    <p>Don’t have an account?</p>
                     <a href="/3pantalla/index.html">Create one</a>
                 </div>
             </div>
         </div>
+        
         <div class="maind">
-            <img src="../imgs/logo2.png" class="logog">
-            <p class="text">SignAi offers an accurate translation from sign language to english text</p>
+            <img src="../imgs/logo2.png" class="logog" loading="lazy" alt="Logo">
+            <p class="text">SignAi offers an accurate translation from sign language to English text</p>
         </div>
     </main>
+
+    <!-- Scripts -->
+    <script src="../header/header.js" defer></script>
+    <script src="../conection/conectionlg.js" defer></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.querySelector("body");
+            body.innerHTML += header();
+            const panelHeader = document.getElementById('fotito');
+            const panelContent = document.getElementById('dropdown');
+
+            panelHeader.addEventListener('click', () => {
+                panelContent.classList.toggle('mostrar');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
+                    panelContent.classList.remove('mostrar');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

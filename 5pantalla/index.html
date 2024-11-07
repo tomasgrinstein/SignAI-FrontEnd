@@ -5,24 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../header/styleheader.css">
     <link rel="stylesheet" href="../global/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../upload/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Botones y contenido principal -->
+    <div class="text5">
+        <p class="texto">Upload It.</p>
+        <div class="btns">
+            <div class="r">
+                <button id="btn1">
+                    <img src="../imgs/bt.png" alt="" class="im" id="fot">
+                </button>
+                <input type="file" id="file" accept="video/*" style="display:none;">
+            </div>
+            <div class="tra">
+                <a href="../6pantalla/index.html"> 
+                    <button id="btn2" class="btn2"> <p class="txt">Translation</p></button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="../header/header.js"></script>
     <script src="../upload/up.js"></script> 
     <script src="../conection/up.js"></script>
 
     <script>
-        // Función para agregar el header
         function agregarHeader() {
             const body = document.querySelector("body");
-            body.innerHTML += header(); // Asegúrate de que 'header' esté definido en header.js
+            body.innerHTML += header(); // Agrega el header desde el script header.js
             const panelHeader = document.getElementById('fotito');
             const panelContent = document.getElementById('dropdown');
 
@@ -38,13 +60,13 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
-            agregarHeader(); // Llama a la función para agregar el header
+            agregarHeader();
 
             const btnUpload = document.getElementById('btn1');
             const fileInput = document.getElementById('file');
 
             btnUpload.addEventListener('click', () => {
-                fileInput.click(); // Simula un clic en el input de archivo
+                fileInput.click();
             });
 
             fileInput.addEventListener('change', () => {
@@ -55,81 +77,46 @@
                 }
             });
 
-            // Código para el segundo botón (Translate) si necesitas agregar funcionalidad aquí
-        });
-    </script>
+            fileInput.addEventListener('change', function() {
+                const file = fileInput.files[0];
+                if (file) {
+                    console.log('Video seleccionado:', file.name);
+                    console.log('Tamaño del archivo:', file.size, 'bytes');
+                    console.log('Tipo de archivo:', file.type);
+                    uploadVideo(file);
+                } else {
+                    console.log('No se ha seleccionado ningún archivo.');
+                }
+            });
 
-    <div class="text5">
-        <p class="texto">Upload It.</p>
-        <div class="btns">
-            <div class="r">
-                <button id="btn1">
-                    <img src="../imgs/bt.png" alt="" class="im" id="fot">
-                </button>
-                <input type="file" id="file" accept="video/*" style="display:none;">
-            </div>
-            <div class="tra">
-                <a href="../6pantalla/index.html"> 
-                    <button id="btn2" class="btn2"> <p class="txt">Translation</p></button>
-                </a>
-                
-            </div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-    const btnUpload = document.getElementById('btn1');
-    const fileInput = document.getElementById('file');
-  
-    fileInput.addEventListener('change', function() {
-        const file = fileInput.files[0];
-        if (file) {
-            console.log('Video seleccionado:', file.name);
-            console.log('Tamaño del archivo:', file.size, 'bytes');
-            console.log('Tipo de archivo:', file.type);
-            uploadVideo(file);
-        } else {
-            console.log('No se ha seleccionado ningún archivo.');
-        }
-    });
+            function uploadVideo(file) {
+                const formData = new FormData();
+                formData.append("video", file);
+                formData.append('Mail_Usuario', "ECHU13@gmail.com");
 
-    function uploadVideo(file) {
-        const formData = new FormData();
-        formData.append("video", file); 
-        formData.append('Mail_Usuario', "ECHU13@gmail.com")
+                const token = localStorage.getItem("token");
 
-        const token = localStorage.getItem("token");
-
-        console.log("Preparando para enviar el archivo al backend...");
-        fetch('https://sign-ai-web.vercel.app/CrearVideo', { 
-            method: 'POST',
-            headers: {
-                "Authorization": `Bearer ${token}` 
-            },
-            body: formData 
-        })
-        .then(response => {
-            console.log('Respuesta del servidor recibida:', response); 
-            return response.json();
-        })
-        .then(data => {
-            console.log('Datos devueltos por el servidor:', data); 
-            if (data && data.id) {
-                console.log("Archivo subido exitosamente:", data);
-                localStorage.setItem('videoId', data.id);
-                console.log('ID guardado en localStorage:', data.id);
-                alert("Archivo subido exitosamente: " + data.message);
-            } else {
-                alert("Error: " + (data.message || "ID no disponible."));
+                fetch('https://sign-ai-web.vercel.app/CrearVideo', { 
+                    method: 'POST',
+                    headers: {
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.id) {
+                        localStorage.setItem('videoId', data.id);
+                        alert("Archivo subido exitosamente: " + data.message);
+                    } else {
+                        alert("Error: " + (data.message || "ID no disponible."));
+                    }
+                })
+                .catch(error => {
+                    alert("Error al subir el archivo: " + error.message);
+                });
             }
-        })
-        .catch(error => {
-            console.log('Error:', error);
-            alert("Error al subir el archivo: " + error.message);
         });
-    }
-});
-
     </script>
 </body>
 </html>
