@@ -2,31 +2,31 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     
-    document.getElementById("loginForm123").addEventListener("submit", function(event) {
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();  // Evita que el formulario se envíe de manera tradicional
 
         console.log("AAAAAAAAAAAa");
 
         const Mail = document.getElementById("email").value;
         const Contraseña = document.getElementById("password").value;
-        const Nombre_Usuario = document.getElementById("username").value;
+        const NombreUsuario = document.getElementById("username").value;
         
         console.log(Mail)
         console.log(Contraseña)
-        console.log(Nombre_Usuario)
+        console.log(NombreUsuario)
 
         // Llama a la función para enviar los datos al back-end
-        loginUser(Mail, Contraseña, Nombre_Usuario);
+        loginUser(Mail, Contraseña, NombreUsuario);
     });
 
     console.log(getEventListeners(document.getElementById("loginForm123")));
     
-    function loginUser(Mail, Contraseña, Nombre_Usuario) {
+    function loginUser(Mail, Contraseña, NombreUsuario) {
 
         const body = {
             "Mail": Mail,
             "Contraseña": Contraseña,
-            "Nombre_Usuario": Nombre_Usuario
+            "NombreUsuario": NombreUsuario
         }
 
         console.log(body);
