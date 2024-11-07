@@ -5,43 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="../header/styleheader.css">
     <link rel="stylesheet" href="../global/style.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="../header/header.js"></script>
-    <script>
-        // agregarHeader();
 
-        document.addEventListener('DOMContentLoaded', () => {
-           const body = document.querySelector("body");
-           body.innerHTML += header();
-           const panelHeader = document.getElementById('fotito');
-           const panelContent = document.getElementById('dropdown');
-
-           panelHeader.addEventListener('click', () => {
-               // Alternar la clase 'show' para mostrar/ocultar el contenido
-               panelContent.classList.toggle('mostrar');
-           });
-
-           // Cerrar el panel si se hace clic fuera de él
-           document.addEventListener('click', (event) => {
-               if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
-                   panelContent.classList.remove('mostrar');
-               }
-           });
-       });
-   </script>
+    <!-- Dropdown Menu -->
     <div id="dropdown">
         <ul class="ul1">
             Traductor
-            <a href="../4pantalla-trns/index.html" class="tr">
-                New Traduction
-            </a>
+            <a href="../4pantalla-trns/index.html" class="tr">New Traduction</a>
         </ul>
         <ul class="ul1">
             SingAi
@@ -51,29 +32,48 @@
         </ul>
         <ul class="ul1">
             Dev´s
-            <a href="" class="tr" id="1"> Credits</a>
+            <a href="" class="tr" id="1">Credits</a>
         </ul>
     </div>
 
+    <!-- Main Content -->
     <main>
         <div class="main_izq"> 
-              <div>
-                    <p class="text1">
-                       Welcome to the SignAi translator.
-                    </p>
-                    <a href="../5pantalla/index.html">
-                        <button class="btnt" id="bl"> 
-                            <p class="textito">Upload video</p>
-                        </button>
-                    </a>
-                    
-              </div>
+            <div>
+                <p class="text1">Welcome to the SignAi translator.</p>
+                <a href="../5pantalla/index.html">
+                    <button class="btnt" id="bl">
+                        <p class="textito">Upload video</p>
+                    </button>
+                </a>
+            </div>
         </div>
         <div class="main_der">
             <img src="../imgs/mujer1.png" alt="mujer1">
         </div>
     </main>
 
-<script src="btn.js"></script>
+    <!-- Scripts -->
+    <script src="../header/header.js" defer></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.querySelector("body");
+            body.innerHTML += header();
+
+            const panelHeader = document.getElementById('fotito');
+            const panelContent = document.getElementById('dropdown');
+
+            panelHeader.addEventListener('click', () => {
+                panelContent.classList.toggle('mostrar');
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!panelHeader.contains(event.target) && !panelContent.contains(event.target)) {
+                    panelContent.classList.remove('mostrar');
+                }
+            });
+        });
+    </script>
+    <script src="btn.js" defer></script>
 </body>
 </html>
