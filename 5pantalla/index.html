@@ -105,8 +105,11 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    if (data && data.id) {
-                        localStorage.setItem('videoId', data.id);
+                    console.log('Datos devueltos por el servidor:', data);
+                    if (data && data.ID) {
+                        console.log("Archivo subido exitosamente AAAAAAAAAAAA:", data);
+                        localStorage.setItem('videoId', data.ID);
+                        console.log('ID guardado en localStorage:', data.ID);
                         alert("Archivo subido exitosamente: " + data.message);
                     } else {
                         alert("Error: " + (data.message || "ID no disponible."));

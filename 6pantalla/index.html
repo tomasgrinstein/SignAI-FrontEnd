@@ -57,6 +57,7 @@
             // Función para obtener la traducción del video
             function getTranslation() {
                 const videoId = localStorage.getItem('videoId');
+                console.log(localStorage)
                 if (!videoId) {
                     alert("No se encontró el ID del video en localStorage.");
                     return;
