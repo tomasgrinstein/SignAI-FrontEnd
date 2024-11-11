@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" async>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../global/style.css">
+    <link rel="stylesheet" href="../header/styleheader.css">
 
     <style>
         /* Eliminar los puntos de las listas */
         #dropdown ul {
             list-style-type: none; /* Elimina los puntos */
-            padding: 0; /* Elimina el espacio interno */
-            margin: 0; /* Elimina el margen externo */
+            margin-top: 10px;
         }
 
         #dropdown li {
@@ -46,18 +46,26 @@
     <div id="dropdown">
         <ul class="ul1">
             <li>Traductor</li>
-            <li><a href="../4pantalla-trns/index.html" class="tr">New Traduction</a></li>
+            <li><a href="../4pantalla-trns/index.html" class="tr" class="t">New Traduction</a></li>
         </ul>
         <ul class="ul1">
             <li>SingAi</li>
-            <li><a href="../1pantalla/index.html" class="tr">Inicio</a></li>
-            <li><a href="../7pantalla/index.html" class="tr">Mi Cuenta</a></li>
-            <li><a href="#" class="tr">Cerrar Sesion</a></li>
+            <li><a href="../1pantalla/index.html" class="tr"class="t">Inicio</a></li>
+            <li><a href="../7pantalla/index.html" class="tr"class="t">Mi Cuenta</a></li>
+            <li><a href="#" class="tr"class="t">Cerrar Sesion</a></li>
         </ul>
         <ul class="ul1">
             <li>Dev's</li>
-            <li><a href="#" class="tr" id="1">Credits</a></li>
+            <li><a href="#" class="trclass="t"" id="1">Credits</a></li>
         </ul>
+        <style>
+            .tr {
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: inherit;
+                    font-weight: bold;
+}
+        </style>
     </div>
 
     <!-- Main Content -->
@@ -80,7 +88,7 @@
         </div>
         
         <div class="main_der">
-            <img src="../imgs/women.png" alt="Woman Illustration" loading="lazy">
+            <img src="../imgs/women.png" alt="Woman Illustration" loading="lazy" cl>
         </div>
     </main>
 

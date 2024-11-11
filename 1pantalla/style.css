@@ -23,6 +23,9 @@
     /* margin-top: -60px; */
     
   }
+  .tr{
+    margin-top: 10px;
+  }
   
   .logo {
     width: 140px;
@@ -87,6 +90,7 @@
     margin-bottom: 0px;
     position: relative;
     z-index: -20;
+    margin-bottom: -120px;
   }
   
   .text1 {
@@ -191,4 +195,16 @@
 .textito{
   font-weight: 700;
   text-decoration: none;
+}
+.tr {
+  margin-top: 10px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+}
+.t{
+  margin-top: 10px;
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
 }

@@ -21,9 +21,26 @@
 
     <main class="main">
         <div class="mainiz">
-            <button class="btnl" id="bt">
-                <p class="textito">Sign-Out</p>
-            </button>
+            
+            <div class="o">
+                <button type="button" class="btnn" onclick="clearToken()">Sign-out</button>
+            </div>
+            <a href="../1pantalla/index.html" class="x">Go Back! </a>
+            
+            <script>
+                function clearToken() {
+                    // Comprueba si el token existe antes de intentar eliminarlo
+                    if (localStorage.getItem('token') !== null) {
+                        localStorage.removeItem('token'); // Elimina el token del localStorage
+                        console.log("El token se ha limpiado correctamente.");
+                        alert("El token se ha limpiado correctamente.");
+                    } else {
+                        console.log("No hay ningún token almacenado en el localStorage.");
+                        alert("No hay ningún token almacenado en el localStorage.");
+                    }
+                }
+            </script>
+            
         </div>
         <div class="mainde">
             <div class="maind2">
@@ -35,14 +52,14 @@
                         <label for="edUsername" class="label1">Username</label>
                         <input type="text" id="edUsername" name="username" required>
 
-                        <label for="edEmail" class="label2">Mail</label>
+                        <label for="edEmail" class="label2"id="im">Mail</label>
                         <input type="email" id="edEmail" name="email" required>
 
                         <label for="edPassword" class="label2">Password</label>
                         <input type="password" id="edPassword" name="password" required>
 
                         <div>
-                            <button type="submit" class="btnn">Sign-in</button>
+                            <button type="submit" class="btnn">Edit</button>
                         </div>
                     </form>
                 </div>
