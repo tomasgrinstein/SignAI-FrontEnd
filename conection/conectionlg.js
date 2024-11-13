@@ -33,7 +33,7 @@ function login(event) {
                 console.log('Login exitoso:', data);
                 alert("Inicio de sesión exitoso!");
                 localStorage.setItem('token', data.token);
-                window.location.href = '../5pantalla';
+                window.location.href = '../4pantalla';
         })
         .catch(error => {
             console.error('Error al intentar iniciar sesión:', error);

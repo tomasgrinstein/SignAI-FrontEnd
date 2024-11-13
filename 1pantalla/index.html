@@ -29,18 +29,7 @@
 
 <body>
     <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <img src="../imgs/logofi.png" alt="Logo">
-        </div>
-        <ul class="menuu">
-            <li>
-                <a href="#">
-                    <img src="../imgs/menuf.png" alt="Menu" class="img5" id="fotito">
-                </a>
-            </li>
-        </ul>
-    </header>
+    
 
     <!-- Dropdown Menu -->
     <div id="dropdown">
@@ -74,16 +63,19 @@
             <img src="../imgs/logofi.png" alt="Logo Secondary" loading="lazy">
             <div>
                 <p class="text1">Your free to use sign language to text translator</p>
-                
-                <button class="btnt" id="bl">
-                    <p class="textito">Translate</p>
-                </button>
-                
                 <a href="../2pantalla/index.html">
                     <button class="btnl" id="bt">
                         <p class="textito">Log-In</p>
                     </button>
                 </a>
+                <a href="../3pantalla/index.html">
+                    <button class="btnt" id="bl">
+                        <p class="textito">Sign-Up</p>
+                    </button>
+                </a>
+                
+                
+                
             </div>
         </div>
         
@@ -94,19 +86,6 @@
 
     <!-- Scripts -->
     <script src="btn.js" defer></script>
-    <script defer>
-        document.getElementById('bl').addEventListener('click', function(event) {
-            event.preventDefault(); 
-
-            const token = localStorage.getItem('token');
-
-            if (token) {
-                window.location.href = '../4pantalla/index.html';
-            } else {
-                alert('Por favor, inicia sesión para continuar.');
-                window.location.href = '../2pantalla/index.html';
-            }
-        });
-    </script>
+    
 </body>
 </html>

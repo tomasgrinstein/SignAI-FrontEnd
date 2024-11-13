@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Llama a la función para enviar los datos al back-end
         loginUser(Mail, Contraseña, NombreUsuario);
     });
-
-    console.log(getEventListeners(document.getElementById("loginForm123")));
     
     function loginUser(Mail, Contraseña, NombreUsuario) {
 

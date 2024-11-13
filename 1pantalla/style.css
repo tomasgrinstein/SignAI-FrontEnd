@@ -208,3 +208,11 @@
   color: inherit;
   font-weight: bold;
 }
+#bt{
+  
+}
+#bl{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
