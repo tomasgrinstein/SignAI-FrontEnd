@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
+* {
+    user-select: none !important;
+}
 
 body {
     background-image: url("../imgs/fondog.png");

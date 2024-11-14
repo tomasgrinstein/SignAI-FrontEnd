@@ -139,4 +139,8 @@ form{
     justify-content:space-between 15px ;
     margin-left: 35px;
 }
+* {
+    user-select: none !important;
+}
+
 

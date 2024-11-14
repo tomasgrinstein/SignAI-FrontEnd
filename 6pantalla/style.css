@@ -186,3 +186,6 @@ form{
 .x{
     font-weight: 800;
 }
+* {
+    user-select: none !important;
+}
