@@ -142,5 +142,21 @@ form{
 * {
     user-select: none !important;
 }
-
+.signinform{
+    display: flex;
+    justify-content: center;
+    align-items: ;
+}
+.maini{
+    padding-top: 30px;
+}
+input[type="text"], input[type="password"] {
+    width: 100%; /* Para que ocupe el ancho completo del contenedor */
+    padding: 10px; /* Agrega espacio interno para que el texto no comience desde el borde */
+    margin-top: 5px; /* Espaciado entre el label y el input */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 14px; /* Tamaño de fuente */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+}
 

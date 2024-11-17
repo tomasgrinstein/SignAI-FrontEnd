@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("../imgs/fondo2.1.png");
+    background-image: url("../imgs/1.png");
     background-size: cover;
     overflow: hidden;
     /* padding-top: 60px; */
@@ -90,6 +90,7 @@ main {
 }
 
 .text1 {
+    margin-top: 100px;
     font-size: 70px;
     height: 100%;
     width: 100%;
@@ -98,6 +99,7 @@ main {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     margin-bottom: -30px;
     font-weight: 700;
+    color: #FF7A00;
 }
 .btns {
     height: 50%;
@@ -185,11 +187,26 @@ main {
 }
 #bl{
     text-decoration: none;
-    margin-top: 30px;
+    margin-top: -30px;
+    height: 40px;
+    width: 200px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
 }
 .textito{
     font-weight: 700;
 }
 * {
     user-select: none !important;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+.textito {
+    text-decoration: none;
 }
