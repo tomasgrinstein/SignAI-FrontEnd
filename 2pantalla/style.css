@@ -106,7 +106,7 @@ form{
     margin: 35px;
 }
 .btnn{
-    margin-top: 10px;
+    margin-top: 1px;
     width: 80%;
     padding-right: 10px;
     height: 40px;
@@ -120,6 +120,7 @@ form{
 }
 .btnn{
     color: white;
+
 }
 .no{
     margin-left: 25px;
@@ -138,6 +139,7 @@ form{
     display: flex;
     justify-content:space-between 15px ;
     margin-left: 35px;
+    margin-top: -10px;
 }
 * {
     user-select: none !important;

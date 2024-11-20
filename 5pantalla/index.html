@@ -73,7 +73,8 @@
                 const file = fileInput.files[0];
                 if (file) {
                     console.log('Video seleccionado:', file.name);
-                    alert('Has subido: ' + file.name);
+                    // alert('Has subido: ' + file.name);
+                    alert('Video subido correctamente');
                 }
             });
 
@@ -96,7 +97,7 @@
 
                 const token = localStorage.getItem("token");
 
-                fetch('https://localhost3000/CrearVideo', { 
+                fetch('http://localhost:3000/CrearVideo', { 
                     method: 'POST',
                     headers: {
                         "Authorization": `Bearer ${token}`
@@ -105,12 +106,12 @@
                 })
                 .then(response => response.json())
                 .then(data => {
-                    console.log('Datos devueltos por el servidor:', data);
+                    console.log('Datos devueltos por el servidor aaaaaa:', data);
                     if (data && data.ID) {
                         console.log("Archivo subido exitosamente AAAAAAAAAAAA:", data);
                         localStorage.setItem('videoId', data.ID);
                         console.log('ID guardado en localStorage:', data.ID);
-                        alert("Archivo subido exitosamente: " + data.message);
+                        // alert("Archivo subido exitosamente: " + data.message);
                     } else {
                         alert("Error: " + (data.message || "ID no disponible."));
                     }
