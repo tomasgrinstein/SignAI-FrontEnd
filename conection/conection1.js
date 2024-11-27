@@ -39,13 +39,13 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .then(response => response.json())
         .then(data => {
-            if (data.success) {
+            if (data) {
                 // Redirige al usuario o guarda el token
-                console.log("Inicio de sesión exitoso:", data);
+                // console.log("Inicio de sesión exitoso:", data);
                 // Por ejemplo, guarda el token en el almacenamiento local
                 localStorage.setItem('token', data.token);
                 // Redirige al usuario a otra página
-                window.location.href = '../5pantalla';
+                window.location.href = '../2pantalla';
             } else {
                 // Muestra un mensaje de error
                 alert("Error: " + data.message);

@@ -31,7 +31,7 @@ function login(event) {
         })
         .then(data => {
                 console.log('Login exitoso:', data);
-                alert("Inicio de sesión exitoso!");
+                // alert("Inicio de sesión exitoso!");
                 localStorage.setItem('token', data.token);
                 window.location.href = '../4pantalla';
         })

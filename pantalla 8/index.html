@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Screen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="overlay">
+    <div class="modal">
+      <div class="icon">
+        <img src="../imgs/hands.png" alt="Hands Icon">
+      </div>
+      <p>Translating...</p>
+    </div>
+  </div>
+
+
+  <script>
+    // Simula la recepción de datos desde el backend
+    setTimeout(() => {
+      window.location.href = "../6pantalla"; // Cambia "pantalla6.html" a la URL de tu pantalla
+    }, 10000); // Ajusta el tiempo en milisegundos (5000 ms = 5 segundos)
+  </script>
+</body>
+</html>
+
+

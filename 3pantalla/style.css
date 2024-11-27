@@ -134,9 +134,9 @@ form{
 }
 .btnn{
     margin-top: 10px;
-    width: 80%;
+    width: 40%;
     padding-right: 10px;
-    height: 40px;
+    height: 30px;
     font-size: 16px;
     margin-bottom: 20px;
     border-radius: 25px;
@@ -166,6 +166,7 @@ form{
 }
 .owo{
     margin-top: -20px;
+    margin-left: 100px;
 }
 .oto{
     margin-top: px;
@@ -184,7 +185,7 @@ input[type="text"], input[type="password"],input[type="email"] {
     box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
 }
 #btnn{
-    margin-top: 30px;
+    
 }
 .pp{
     margin-top: 20px;
