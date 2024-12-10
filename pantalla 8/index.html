@@ -17,14 +17,47 @@
     </div>
   </div>
 
-
   <script>
-    // Simula la recepción de datos desde el backend
-    setTimeout(() => {
-      window.location.href = "../6pantalla"; // Cambia "pantalla6.html" a la URL de tu pantalla
-    }, 10000); // Ajusta el tiempo en milisegundos (5000 ms = 5 segundos)
+    document.addEventListener('DOMContentLoaded', () => {
+      const videoId = localStorage.getItem('videoId'); // Obtén el ID del video almacenado
+      if (!videoId) {
+        alert("No se encontró el ID del video en localStorage.");
+        return;
+      }
+
+      // Función para verificar el estado de la traducción
+      function checkTranslation() {
+        fetch(`https://sign-ai-web.vercel.app/${videoId}/getTexto`, {
+          method: 'GET',
+          headers: {
+            'Authorization': 'Bearer ' + localStorage.getItem('token')
+          }
+        })
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Error en la red: ' + response.statusText);
+          }
+          return response.json();
+        })
+        .then(data => {
+          const textoDevuelto = data.Texto_Devuelto;
+          if (textoDevuelto) {
+            // Si el texto está disponible, redirige a la pantalla 6
+            window.location.href = "../6pantalla";
+          } else {
+            // Si no está disponible, reintenta después de un breve intervalo
+            setTimeout(checkTranslation, 5000);
+          }
+        })
+        .catch(error => {
+          console.error('Error al verificar la traducción:', error);
+          alert("Error de red: " + error.message);
+        });
+      }
+
+      // Inicia la verificación periódica
+      checkTranslation();
+    });
   </script>
 </body>
 </html>
-
-
