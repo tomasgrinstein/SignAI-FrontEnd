@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Por ejemplo, guarda el token en el almacenamiento local
                 localStorage.setItem('token', data.token);
                 // Redirige al usuario a otra página
-                window.location.href = '../2pantalla';
+                window.location.href = '../2pantalla/index.html';
             } else {
                 // Muestra un mensaje de error
                 alert("Error: " + data.message);

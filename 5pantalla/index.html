@@ -116,6 +116,9 @@
                         alert("Error: " + (data.message || "ID no disponible."));
                     }
                 })
+                .then(() => {
+                    window.location.href = "../8pantalla/index.html";
+                })
                 .catch(error => {
                     alert("Error al subir el archivo: " + error.message);
                 });
